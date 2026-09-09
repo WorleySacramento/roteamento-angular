@@ -7,7 +7,7 @@ export class LoginService {
 
   constructor() { }
 
-    private email: string = 'usuario@exemplo.com';
+    private email: string = 'email@email.com';
   private password: string = '12345';
   logado: boolean = false;
 

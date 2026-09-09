@@ -7,6 +7,7 @@ import { FaqComponent } from './components/faq/faq.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { UsuarioLogadoGuard } from './guards/usuario-logado.guard';
+import { OutProducDetailGuard } from './guards/out-produc-detail.guard';
 
 const routes: Routes = [
   {
@@ -31,6 +32,7 @@ const routes: Routes = [
       {
         path: ':cod',
         component: ProductDetailComponent,
+        canDeactivate: [OutProducDetailGuard]
       },
     ]
   },

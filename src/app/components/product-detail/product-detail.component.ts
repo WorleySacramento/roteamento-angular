@@ -11,6 +11,11 @@ import { ProdutoService } from 'src/app/services/produto.service';
 export class ProductDetailComponent implements OnInit {
   produto?: Produto;
   notFound: boolean = false;
+  pressClose: boolean = false;
+
+  alertClose(){
+    alert("Clique em fechar para voltar à lista de produtos.");
+  }
 
   constructor(
     private produtoService: ProdutoService,
