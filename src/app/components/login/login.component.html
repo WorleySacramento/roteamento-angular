@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="container">
+    <input
+    [(ngModel)]="email"
+    class="form-control mb-3"
+     type="email" placeholder="Digite o email"/>
+
+     <input
+    [(ngModel)]="password"
+    class="form-control mb-3"
+     type="password" placeholder="Digite a senha"/>
+
+     <button
+     (click)="login()"
+     [disabled]="!email || !password"
+     class="btn btn-primary"
+     >
+        login
+     </button>
+</div>
