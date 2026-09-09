@@ -19,10 +19,12 @@ const routes: Routes = [
   {
     path: 'produtos',
     component: ProdutosComponent,
-  },
-  {
-    path: 'produtos/:cod',
-    component: ProductDetailComponent,
+    children: [
+      {
+        path: ':cod',
+        component: ProductDetailComponent,
+      },
+    ]
   },
   {
     path: 'faq',

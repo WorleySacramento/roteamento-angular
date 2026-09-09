@@ -1,5 +1,14 @@
-<div *ngIf="!notFound; else containerNaoEncontrado">
-{{produto | json}}
+
+
+<div  *ngIf="!notFound; else containerNaoEncontrado" class="container m-5">
+<div class="card" style="width: 18rem;">
+  <img [src]="produto?.imagem" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{produto?.nome}}</h5>
+    <p class="card-text">{{produto?.descricao}}</p>
+    <a routerLink="/" class="btn btn-primary">Fechar</a>
+  </div>
+</div>
 </div>
 
 <ng-template #containerNaoEncontrado>
