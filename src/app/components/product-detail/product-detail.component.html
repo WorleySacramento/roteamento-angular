@@ -1,1 +1,7 @@
-<p>product-detail works!</p>
+<div *ngIf="!notFound; else containerNaoEncontrado">
+{{produto | json}}
+</div>
+
+<ng-template #containerNaoEncontrado>
+    <h2>Produto não encontrado</h2>
+</ng-template>
