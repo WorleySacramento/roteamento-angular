@@ -1,1 +1,10 @@
-<p>produtos works!</p>
+<div class="container m-5">
+<div *ngFor="let prod of produtos" class="card" style="width: 18rem;">
+  <img [src]="prod.imagem" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{prod.nome}}</h5>
+    <p class="card-text">{{prod.descricao}}</p>
+    <a routerLink="/produtos/{{prod.cod}}" class="btn btn-primary">Ver Produto</a>
+  </div>
+</div>
+</div>
