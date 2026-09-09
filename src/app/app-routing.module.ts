@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'faq',
     component: FaqComponent,
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   }
 ];
 
