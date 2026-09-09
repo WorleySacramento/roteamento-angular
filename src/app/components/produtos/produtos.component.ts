@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produto } from 'src/app/models/produto';
 import { ProdutoService } from 'src/app/services/produto.service';
 
@@ -9,8 +10,16 @@ import { ProdutoService } from 'src/app/services/produto.service';
 })
 export class ProdutosComponent implements OnInit {
   produtos: Produto[] = [];
+  cod: string = '';
 
-  constructor(private produtoService: ProdutoService) {}
+  constructor(
+    private produtoService: ProdutoService,
+    private router: Router
+  ) {}
+
+  goToProduct(){
+    this.router.navigate(['/produtos', this.cod]);
+  }
 
   ngOnInit(): void {
     this.produtos = this.produtoService.listarProdutos();

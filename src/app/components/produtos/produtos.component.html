@@ -1,3 +1,7 @@
+
+<div class="container">
+    <input class="form-control mb-3" [(ngModel)]="cod" type="text" name="" id="" placeholder="Digite um codigo"/>
+    <button class="btn btn-primary" (click)="goToProduct()">Buscar</button>
 <div class="container m-5">
 <div *ngFor="let prod of produtos" class="card" style="width: 18rem;">
   <img [src]="prod.imagem" class="card-img-top" alt="...">
@@ -6,5 +10,6 @@
     <p class="card-text">{{prod.descricao}}</p>
     <a routerLink="/produtos/{{prod.cod}}" class="btn btn-primary">Ver Produto</a>
   </div>
+</div>
 </div>
 </div>
